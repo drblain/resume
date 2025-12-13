@@ -1,5 +1,5 @@
 % David Blain's professional resume
-% Last Modified: Sat Dec 13 09:35:45 AM EST 2025
+% Last Modified: Sat Dec 13 09:47:41 AM EST 2025
 % Computer Science
 
 % Elevator Pitch
@@ -30,6 +30,13 @@
 % general command to align symbols better to the vertical axis of a single line
 \newcommand{\vup}[1]{%
     \raisebox{\dimexpr(\fontcharht\font`X-\height+\depth)/2\relax}{#1}% chktex 41
+}
+
+% generic environment for the properly formatted sublists of each section
+\newenvironment{marginmini}{%
+    \begin{minipage}{\dimexpr\textwidth-1cm\relax}%
+}{%
+    \end{minipage}%
 }
 
 \begin{document}
@@ -69,7 +76,7 @@
     \hrule
     \vspace{\postheaderspacing}
     \hspace{12pt}
-    \begin{minipage}{\dimexpr\textwidth-1cm}
+    \begin{marginmini}
         \textbf{Leidos}, Tewksbury, MA
 
         \textit{Software Engineer II}, November 2024 | Present
@@ -105,7 +112,7 @@
             \item Produced presentations and technical reports while investigating the effects of scanning electron microscopy on the structure of phase change materials in a diverse team-based environment.
             \item Mentored for the Young Scholars Senior Summit program by teaching students the principles of electric circuits.
         \end{itemize}
-    \end{minipage}
+    \end{marginmini}
     \vspace{\sectionspacing}
 
     \textbf{Personal Projects}
@@ -113,7 +120,7 @@
     \hrule
     \vspace{\postheaderspacing}
     \hspace{12pt}
-    \begin{minipage}{\dimexpr\textwidth-1cm}
+    \begin{marginmini}
     \textbf{
         \textit{'rs-brite'} Automatic Brightness Adjustment Daemon}
 
@@ -128,7 +135,7 @@
 
         React Native (Expo), Typescript, SQLite, Tailwind CSS
 
-    \end{minipage}
+    \end{marginmini}
     \vspace{\sectionspacing}
 
     \textbf{Education}
@@ -136,11 +143,11 @@
     \hrule
     \vspace{\postheaderspacing}
     \hspace{12pt}
-    \begin{minipage}{\dimexpr\textwidth-1cm}
+    \begin{marginmini}
         \textbf{University of Connecticut}, Storrs, CT
 
         \textit{Bachelor of Computer Science and Engineering}, May 2021
 
         Minor: \textit{Mathematics} \quad GPA:\@ 3.96/4.00
-    \end{minipage}
+    \end{marginmini}
 \end{document}
