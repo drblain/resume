@@ -1,5 +1,5 @@
 % David Blain's professional resume
-% Last Modified: Sat Dec 13 09:47:41 AM EST 2025
+% Last Modified: Sat Dec 13 12:01:11 PM EST 2025
 % Computer Science
 
 % Elevator Pitch
@@ -39,6 +39,13 @@
     \end{minipage}%
 }
 
+%generic itemize for closer formatting
+\newenvironment{closeitems}{%
+    \begin{itemize}[itemsep=0pt, topsep=0pt]%
+}{%
+    \end{itemize}
+}
+
 \begin{document}
     \begin{center}
         \LARGE{\textbf{David Blain}}
@@ -46,12 +53,12 @@
         \vspace{2mm}
 
         \small{\faMailBulk\hspace{1mm}}
-        \large{\myemail}
+        \large{\href{mailto:\myemail}{\myemail}}
         \large{\vup{\(\vert \)}}
         \small{\faPhone\hspace{1mm}}
         \large{\myphone}
         \large{\vup{\(\vert \)}}
-        % These icons look better as "large". this is the default, but use it anyway
+        % These icons look better as "large". this is the default, but use it anyway to be explicit
         \large{\faGithub\hspace{1mm}}
         \href{https://github.com/drblain/resume}{drblain}
         \large{\vup{\(\vert \)}}
@@ -81,13 +88,15 @@
 
         \textit{Software Engineer II}, November 2024 | Present
 
-        C\vup{++}, C, Linux (RHEL/CentOS), Qt, Boost, CMake, Azure Ecosystem, Azure Pipelines, Google Test (GTest), Docker, Git
+        C\vup{++}, Linux (RHEL/CentOS), Qt, Boost, CMake, Azure, Google Test (GTest), Git, PostgreSQL
 
-        \begin{itemize}[itemsep=0pt, topsep=0pt]
-            \item Worked in a collaborative hybrid software engineering team on vital airport scanner software interfacing with both hardware and user space.
-            \item Optimized build processes utilizing CMake and automatic pipelines in Azure DevOps resulting in systematic changes to the everyday development process of the team.
-            \item Benchmarked performance for IPC data transfers utilizing realistic payload sizes and throughput rates of a real time system to inform critical software performance design decisions.
-        \end{itemize}
+        \begin{closeitems}
+            \item Modernized build infrastructure by migrating from CMSynergy/SL6 to Git/RHEL8 on Azure preserving over 10 years of history and developer workflows.
+            \item Refactored and redesigned integration of critical hardware monitoring systems in upgrade from Qt4 QScriptEngine to Qt5 QJSEngine, correcting Javascript syntax and providing developer ergonomics through metaprogramming.
+            \item Architected test infrastructure for legacy and emerging code using Azure pipelines and GTest, enabling automatic CI/CD of build artifacts and providing full test coverage for affected code.
+            \item Participated in hands-on rapid prototyping and integration between the \textit{eXaminer} system and a new third-party system, enabling data fusion to reduce misclassification of threat objects while maintainging existing system performance.
+            \item Lead the design and implementation for conversion of existing Multi-View image data to a unified \textit{DICOS}-compliant standard, allowing the MV3D scanner to integrate with cutting edge aviation security screening management suites.
+        \end{closeitems}
 
         \textbf{Raytheon Technologies}, Marlborough, MA
 
@@ -95,11 +104,11 @@
 
         C\vup{++}, Java, MATLAB, Lua, GTest, Jenkins, Git/Clearcase, iTracker
 
-        \begin{itemize}[itemsep=0pt, topsep=0pt]
+        \begin{closeitems}
             \item Spearheaded the design and implementation of several radar software features while incorporating continuous systems engineering feedback in an agile work environment.
             \item Formulated and implemented both system-level and unit-level tests utilizing both MATLAB analysis of real-time simulation data as well as the GoogleTest framework.
             \item Resolved numerous defects in the multi-million line radar code base to directly support discrete test event deadlines and associated test objectives.
-        \end{itemize}
+        \end{closeitems}
         
         \textbf{UConn Nanoelectronics Laboratory}, Storrs, CT
 
@@ -107,11 +116,11 @@
 
         COMSOL, MATLAB, Python
 
-        \begin{itemize}[itemsep=0pt, topsep=0pt]
+        \begin{closeitems}
             \item Extended mathematical models and conducted simulations of nanoelectronic devices using COMSOL Multiphysics simulation software.
             \item Produced presentations and technical reports while investigating the effects of scanning electron microscopy on the structure of phase change materials in a diverse team-based environment.
             \item Mentored for the Young Scholars Senior Summit program by teaching students the principles of electric circuits.
-        \end{itemize}
+        \end{closeitems}
     \end{marginmini}
     \vspace{\sectionspacing}
 
@@ -121,19 +130,22 @@
     \vspace{\postheaderspacing}
     \hspace{12pt}
     \begin{marginmini}
-    \textbf{
-        \textit{'rs-brite'} Automatic Brightness Adjustment Daemon}
-
-        Rust, Bash, systemd, TOML, Debian packaging, computer vision, display servers
-
-        \begin{itemize}[itemsep=0pt, topsep=0pt]
-            \item Producer-consumer thread model operating as a systemd daemon to consume a system-level hotkey hook to execute the desired action in a lightweight way.
-            \item K
-        \end{itemize}
-
         \textbf{\textit{'Rep It'} Exercise Logging and Analysis Mobile App}
 
         React Native (Expo), Typescript, SQLite, Tailwind CSS
+
+        \begin{closeitems}
+            \item
+        \end{closeitems}
+
+        \textbf{\textit{'rs-brite'} Automatic Brightness Adjustment Daemon}
+
+        Rust, Bash, systemd, TOML, Debian packaging, computer vision, display servers
+
+        \begin{closeitems}
+            \item Producer-consumer thread model operating as a systemd daemon to consume a system-level hotkey hook to execute the desired action in a lightweight way.
+            \item K
+        \end{closeitems}
 
     \end{marginmini}
     \vspace{\sectionspacing}
@@ -146,8 +158,10 @@
     \begin{marginmini}
         \textbf{University of Connecticut}, Storrs, CT
 
-        \textit{Bachelor of Computer Science and Engineering}, May 2021
+        \textit{Bachelor of Engineering, Major in Computer Science and Engineering, Minor in Mathematics}, August 2017 | May 2021
 
-        Minor: \textit{Mathematics} \quad GPA:\@ 3.96/4.00
+        Honors: Sophomore Honors, Magna Cum Laude
+
+        Cumulative GPA:\@ 3.96/4.00
     \end{marginmini}
 \end{document}
