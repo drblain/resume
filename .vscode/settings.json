@@ -1,0 +1,13 @@
+{
+    "emeraldwalk.runonsave": {
+        "commands": [
+            {
+                "match": "\\.tex$",
+                "cmd": "sed -i \"s/^% Last Modified:.*/% Last Modified: $(date)/\" ${file}"
+            }
+        ]
+    },
+
+    "latex-workshop.linting.chktex.enabled": true,
+    "latex-workshop.linting.run": "onType"
+}

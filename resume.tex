@@ -1,0 +1,146 @@
+% David Blain's professional resume
+% Last Modified: Sat Dec 13 09:35:45 AM EST 2025
+% Computer Science
+
+% Elevator Pitch
+% Employment History
+% Projects
+% Education
+
+\documentclass[10pt, letterpaper]{report}
+\usepackage[margin=0.3in]{geometry}
+\usepackage{parcolumns}
+\usepackage{enumitem}
+\usepackage{nopageno}
+\usepackage{parcolumns}
+\usepackage{fontawesome5}
+\usepackage{hyperref}
+
+\IfFileExists{personal_info.tex}{
+    \input{personal_info.tex}% chktex 27
+}{
+    \input{personal_info_stub.tex}% chktex 27
+}
+
+\setlength\parindent{0pt}
+
+\newcommand{\sectionspacing}{2mm}
+\newcommand{\postheaderspacing}{1mm}
+
+% general command to align symbols better to the vertical axis of a single line
+\newcommand{\vup}[1]{%
+    \raisebox{\dimexpr(\fontcharht\font`X-\height+\depth)/2\relax}{#1}% chktex 41
+}
+
+\begin{document}
+    \begin{center}
+        \LARGE{\textbf{David Blain}}
+
+        \vspace{2mm}
+
+        \small{\faMailBulk\hspace{1mm}}
+        \large{\myemail}
+        \large{\vup{\(\vert \)}}
+        \small{\faPhone\hspace{1mm}}
+        \large{\myphone}
+        \large{\vup{\(\vert \)}}
+        % These icons look better as "large". this is the default, but use it anyway
+        \large{\faGithub\hspace{1mm}}
+        \href{https://github.com/drblain/resume}{drblain}
+        \large{\vup{\(\vert \)}}
+        \large{\faLinkedin\hspace{1mm}}
+        \href{https://www.linkedin.com/in/davidrblain/}{davidrblain}
+
+        \large{\myaddress}
+    \end{center}
+
+    \textbf{Summary}
+    \vspace{1mm}
+    \hrule
+    \vspace{\postheaderspacing}
+    \hspace{12pt}
+    \begin{minipage}{\dimexpr\textwidth-2cm}
+        Software engineer with deep experience designing, implementing, and testing systems across the full stack | from embedded firmware to user-space applications.
+    \end{minipage}
+    \vspace{\sectionspacing}
+
+    \textbf{Employment}
+    \vspace{1mm}
+    \hrule
+    \vspace{\postheaderspacing}
+    \hspace{12pt}
+    \begin{minipage}{\dimexpr\textwidth-1cm}
+        \textbf{Leidos}, Tewksbury, MA
+
+        \textit{Software Engineer II}, November 2024 | Present
+
+        C\vup{++}, C, Linux (RHEL/CentOS), Qt, Boost, CMake, Azure Ecosystem, Azure Pipelines, Google Test (GTest), Docker, Git
+
+        \begin{itemize}[itemsep=0pt, topsep=0pt]
+            \item Worked in a collaborative hybrid software engineering team on vital airport scanner software interfacing with both hardware and user space.
+            \item Optimized build processes utilizing CMake and automatic pipelines in Azure DevOps resulting in systematic changes to the everyday development process of the team.
+            \item Benchmarked performance for IPC data transfers utilizing realistic payload sizes and throughput rates of a real time system to inform critical software performance design decisions.
+        \end{itemize}
+
+        \textbf{Raytheon Technologies}, Marlborough, MA
+
+        \textit{Software Engineer I}, February 2022 | June 2024
+
+        C\vup{++}, Java, MATLAB, Lua, GTest, Jenkins, Git/Clearcase, iTracker
+
+        \begin{itemize}[itemsep=0pt, topsep=0pt]
+            \item Spearheaded the design and implementation of several radar software features while incorporating continuous systems engineering feedback in an agile work environment.
+            \item Formulated and implemented both system-level and unit-level tests utilizing both MATLAB analysis of real-time simulation data as well as the GoogleTest framework.
+            \item Resolved numerous defects in the multi-million line radar code base to directly support discrete test event deadlines and associated test objectives.
+        \end{itemize}
+        
+        \textbf{UConn Nanoelectronics Laboratory}, Storrs, CT
+
+        \textit{Research Assistant}, May 2019 | March 2020
+
+        COMSOL, MATLAB, Python
+
+        \begin{itemize}[itemsep=0pt, topsep=0pt]
+            \item Extended mathematical models and conducted simulations of nanoelectronic devices using COMSOL Multiphysics simulation software.
+            \item Produced presentations and technical reports while investigating the effects of scanning electron microscopy on the structure of phase change materials in a diverse team-based environment.
+            \item Mentored for the Young Scholars Senior Summit program by teaching students the principles of electric circuits.
+        \end{itemize}
+    \end{minipage}
+    \vspace{\sectionspacing}
+
+    \textbf{Personal Projects}
+    \vspace{1mm}
+    \hrule
+    \vspace{\postheaderspacing}
+    \hspace{12pt}
+    \begin{minipage}{\dimexpr\textwidth-1cm}
+    \textbf{
+        \textit{'rs-brite'} Automatic Brightness Adjustment Daemon}
+
+        Rust, Bash, systemd, TOML, Debian packaging, computer vision, display servers
+
+        \begin{itemize}[itemsep=0pt, topsep=0pt]
+            \item Producer-consumer thread model operating as a systemd daemon to consume a system-level hotkey hook to execute the desired action in a lightweight way.
+            \item K
+        \end{itemize}
+
+        \textbf{\textit{'Rep It'} Exercise Logging and Analysis Mobile App}
+
+        React Native (Expo), Typescript, SQLite, Tailwind CSS
+
+    \end{minipage}
+    \vspace{\sectionspacing}
+
+    \textbf{Education}
+    \vspace{1mm}
+    \hrule
+    \vspace{\postheaderspacing}
+    \hspace{12pt}
+    \begin{minipage}{\dimexpr\textwidth-1cm}
+        \textbf{University of Connecticut}, Storrs, CT
+
+        \textit{Bachelor of Computer Science and Engineering}, May 2021
+
+        Minor: \textit{Mathematics} \quad GPA:\@ 3.96/4.00
+    \end{minipage}
+\end{document}
